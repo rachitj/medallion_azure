@@ -1,0 +1,12 @@
+﻿*.config
+launch.json
+log.txt
+*.env
+*.pyc
+*.tfvars
+*.tfstate*
+*.out
+*.lock*
+.terraform
+venv
+.idea

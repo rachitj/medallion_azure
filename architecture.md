@@ -1,0 +1,29 @@
+# root
+
+1. azure_rm_resource_grp
+   1. rg
+      1. azurerm_monitor_action_group
+      2. azurerm_consumption_budget_resource_group
+2. module
+   1. data_factory
+      1. data
+         1. azurerm_storage_account
+         2. azure_folder_storage
+      2. azurerm_data_factory
+         1. adf
+      3. azurerm_data_factory_dataset_binary
+         1. source_dataset
+         2. destination_dataset
+      4. azurerm_data_factory_linked_service_azure_blob_storage
+         1. source
+         2. destination
+      5. azurerm_data_factory_pipeline
+         1. copy_data
+   2. storage_account
+      1. azurerm_storage_account
+         1. storage
+      2. azurerm_storage_blob
+         1. create_test_file
+      3. azurerm_storage_container
+         1. create_container("source")
+         2. create_container("destination")
