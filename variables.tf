@@ -71,3 +71,30 @@ variable "key_vault_name" {
   description = "The key_vault name"
   type        = string
 }
+
+
+variable "sql_server_name" {
+  description = "The name of the SQL Server"
+  type        = string
+}
+
+variable "sql_server_version" {
+  description = "The SQL Server version"
+  type        = string
+}
+
+variable "sql_admin_login" {
+  description = "The SQL admin login"
+  type        = string
+}
+
+variable "sql_admin_password" {
+  description = "The SQL admin password"
+}
+
+
+variable "sql_db_name" {
+  description = "The name of the SQL Database"
+  type        = string
+}
+

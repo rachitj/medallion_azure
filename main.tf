@@ -16,7 +16,6 @@ provider "azurerm" {
 }
 
 
-
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = var.location
@@ -60,6 +59,36 @@ module "data_factory" {
   df_name              = var.df_name
 
 
+  depends_on = [
+    azurerm_resource_group.rg
+  ]
+}
+
+
+module "key_vault" {
+  source = "./modules/key_vault/key_vault"
+
+  resource_group_name  = var.resource_group_name
+  storage_account_name = var.storage_account_name
+  location             = var.location
+  key_vault_name       = var.key_vault_name
+
+  depends_on = [
+    azurerm_resource_group.rg
+  ]
+}
+
+
+module "sql_database" {
+  source = "./modules/sql_database/sql_database"
+
+  resource_group_name    = var.resource_group_name
+  location               = var.location
+  sql_server_name        = var.sql_server_name
+  sql_server_version     = var.sql_server_version
+  sql_admin_login    = var.sql_admin_login
+  sql_admin_password     = var.sql_admin_password
+  sql_db_name            = var.sql_db_name
   depends_on = [
     azurerm_resource_group.rg
   ]

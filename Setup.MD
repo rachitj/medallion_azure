@@ -33,8 +33,6 @@
    3. deactivate: conda deactivate
    4. update environment: conda env update --name <environment_name> --file environment.yml
    5. remove: conda env remove --name <environment_name>
-   6. List of environment to check : conda env list
-2. Terraform
    1. format: terraform fmt
    2. initialize: terraform init
    3. validate: terraform validate
