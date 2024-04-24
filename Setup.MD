@@ -33,10 +33,12 @@
    3. deactivate: conda deactivate
    4. update environment: conda env update --name <environment_name> --file environment.yml
    5. remove: conda env remove --name <environment_name>
-   1. format: terraform fmt
-   2. initialize: terraform init
-   3. validate: terraform validate
-   4. terraform plan -out=plan -var-file="D:/codes/Projects/de/medallion/variables.tfvars" ( please input your location of project here)
+   6. format: terraform fmt
+   7. initialize: terraform init
+   8. validate: terraform validate
+   9. terraform plan -out=plan -var-file="D:/codes/Projects/de/medallion/variables.tfvars" ( please input your location of project here)
+2. Add your public ip in start and end ip same: terminal : curl ifconfig.me
+   This command will return your public IP address. Please note that this is different from your local IP address, which is used within your local network.
 
 # Documentation
 

@@ -89,6 +89,9 @@ module "sql_database" {
   sql_admin_login    = var.sql_admin_login
   sql_admin_password     = var.sql_admin_password
   sql_db_name            = var.sql_db_name
+  sql_firewall_rule_name = var.sql_firewall_rule_name
+  start_ip_address = var.start_ip_address
+  end_ip_address = var.end_ip_address
   depends_on = [
     azurerm_resource_group.rg
   ]

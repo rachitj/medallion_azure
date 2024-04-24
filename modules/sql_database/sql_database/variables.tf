@@ -34,3 +34,17 @@ variable "sql_db_name" {
   type        = string
 }
 
+variable "sql_firewall_rule_name" {
+  description = "The name of the SQL firewall rule"
+  type        = string
+}
+
+variable "start_ip_address" {
+  description = "The start IP address"
+  type        = string
+}
+
+variable "end_ip_address" {
+  description = "The end IP address"
+  type        = string
+}
