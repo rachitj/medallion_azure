@@ -1,3 +1,7 @@
+variable "prefix" {
+  description = "This prefix will be included in the name of most resources."
+  default     = "dfm"
+}
 
 variable "subscription_id" {
   description = "The subscription_id for Application Object for login to Azure"

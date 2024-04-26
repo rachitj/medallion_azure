@@ -86,13 +86,29 @@ module "sql_database" {
   location               = var.location
   sql_server_name        = var.sql_server_name
   sql_server_version     = var.sql_server_version
-  sql_admin_login    = var.sql_admin_login
+  sql_admin_login        = var.sql_admin_login
   sql_admin_password     = var.sql_admin_password
   sql_db_name            = var.sql_db_name
   sql_firewall_rule_name = var.sql_firewall_rule_name
-  start_ip_address = var.start_ip_address
-  end_ip_address = var.end_ip_address
+  start_ip_address       = var.start_ip_address
+  end_ip_address         = var.end_ip_address
   depends_on = [
     azurerm_resource_group.rg
   ]
+}
+
+
+
+module "databricks" {
+  source              = "./modules/databricks/databricks"
+  subscription_id     = var.subscription_id
+  client_id           = var.client_id
+  client_secret       = var.client_secret
+  tenant_id           = var.tenant_id
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  prefix              = var.prefix
+
+
+
 }
